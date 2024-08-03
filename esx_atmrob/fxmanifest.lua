@@ -13,7 +13,3 @@ shared_script '@ox_lib/init.lua'
 client_script 'client.lua'
 server_script 'server.lua'
 
-dependencies {
-    'ox_target',
-    'es_extended'
-}
