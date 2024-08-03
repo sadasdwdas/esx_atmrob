@@ -6,11 +6,11 @@ Config.ATMProps = {
     'prop_atm_03'
 }
 
-Config.ATMCooldown = 21600  -- 6 hours
+Config.ATMCooldown = 21600
 
 Config.Reward = {
-    min = 500,  -- minimum amount of money
-    max = 2000  -- maximum amount of money
+    min = 500,
+    max = 2000
 }
 
 Config.ShockChance = 20
