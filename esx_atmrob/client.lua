@@ -1,7 +1,6 @@
 ESX = exports['es_extended']:getSharedObject()
 local robbedATMs = {}
 
--- Function to check if an ATM can be robbed and return the remaining cooldown time
 local function canRobATM(atm)
     if robbedATMs[atm] then
         local elapsedTime = (GetGameTimer() - robbedATMs[atm]) / 1000
@@ -22,9 +21,8 @@ local function applyShockEffect()
     SetPedToRagdoll(playerPed, 30000, 30000, 0, true, true, false)
 
     Citizen.CreateThread(function()
-        local endTime = GetGameTimer() + 50000 -- 30 seconds shock + 20 seconds drunk
+        local endTime = GetGameTimer() + 50000 
 
-        -- Start drunk effect immediately
         SetPedIsDrunk(playerPed, true)
         ShakeGameplayCam('DRUNK_SHAKE', 1.0)
         SetTimecycleModifier('spectator5')
